@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>World Clock By Guruji</title>
+  </head>
+  <style>
+    @media(max-width:707px) {
+      .display-4{
+        font-size: 25px;
+      }
+      #loc{
+        font-size: 25px;
+      }
+      #dd{
+        font-size: 25px;
+      }
+    
+    }
+  </style>
+  <body>
+   <header class="site-navbar" role="banner">
+    <div id="brand"><a href="/">The World Clock</a></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="/">Gallery</a></li>
+       <li ><a href="/contact.html">Contact Us</a></li>
+      
+      </ul>
+    </nav>
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <ul class="mobile-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="/">Gallery</a></li>
+     <li ><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    </header>
+ <div class="hero" style="background-image: url('images/i1.jpg');">
+    
+<div class="jumbotron">
+        <h2 class="display-4">Current Location is:&nbsp;&nbsp;<span id="loc" style="font-size: 30px;"></span> </h2>
+        <h2 class="display-4">Current time Is:&nbsp;&nbsp;<span id="worldclock" style="font-size: 30px;"></span></h2>
+        <h2 class="display-4">Current Date Is:&nbsp;&nbsp;<span id="dd" style="font-size: 30px;"></span></h2>
+
+        <p style="margin-top: 20px; margin-left: 10vw;">Please Select a Country</p>
+        <table border="0" cellspacing="0" cellpadding="3" style="table-layout: fixed; margin-left: 10vw;">
+            <form name="where">
+                <tr >
+                    <td>
+                        <select id="city" name="city" size="1" onchange="updateclock(this)" style="height: 40px;">
+                              <option value="" selected>Local</option>
+                            <option value="4.5"> Afghanistan</option>
+                            <option value="1.0">Albania</option>
+                            <option value="1.0">Algeria</option>
+                            <option value="-11.0">American Samoa</option>
+                            <option value="1.0">Angola</option>
+                            <option value="-4.0">Anguilla</option>
+                            <option value="-4.0">Antigua and Barbuda</option>
+                            <option value="-3.0">Argentina</option>
+                            <option value="4.0">Armenia</option>
+                            <option value="-4"> Aruba</option>
+                            <option value="8.0">Western Australia </option>
+                            <option value="9.3">South Australia</option>
+                            <option value="9.3">Northern Territory</option>
+                            <option value="10.0">New South Wales (NSW)</option>
+                            <option value="10.0">Tasmania(TAS),</option>
+                            <option value="10.0">Queensland(QLD)</option>
+                            <option value="10.3">Lord Howe Island</option>
+                            <option value="11.0"> Macquarie Island</option>
+                            <option value="1.0"> Austria</option>
+                            <option value="4.0"> Azerbaijan</option>
+                            <option value="-5.0"> Bahamas</option>
+                            <option value="3.0"> Bahrain</option>
+                            <option value="6.0">Bangladesh</option>
+                            <option value="-4.0">Barbados</option>
+                            <option value="3.0">Belarus</option>
+                            <option value="1.0">Belgium</option>
+                            <option value="-6">Belize</option>
+                            <option value="1.0">Benin</option>
+                            <option value="-4.0">Bermuda</option>
+                            <option value="6.0">Bhutan</option>
+                            <option value="-4.0">Bolivia</option>
+                            <option value="1.0">Bosnia &Herzegovina</option>
+                            <option value="2.0">Botswana</option>
+                            <option value="-5.0">Acre,Southwest Amazonas</option>
+                            <option value="-4.0">Most of Amazonas</option>
+                            <option value="-4.0">Mato Grosso do Sul</option>
+                            <option value="-4.0">Virgin Islands</option>
+                            <option value="8.0">Brunei</option>
+                            <option value="2.0">Bulgaria</option>
+                            <option value="0.0">Burkina Faso</option>
+                            <option value="2.0">Burundi</option>
+                            <option value="7.0">Cambodia</option>
+                            <option value="1.0">Cameroon</option>
+                            <option value="-7.0">Canada-alberta</option>
+                            <option value="-7.0">Canada-peace river distt.</option>
+                            <option value="-8.0"> Canada-Vancouver</option>
+                            <option value="-5.0"> Canada-Ontario</option>
+                            <option value="-5.0">Cayman Islands</option>
+                            <option value="1.0">Central African Republic</option>
+                            <option value="1.0">Chad</option>
+                            <option value="-4.0">Chile,main territory</option>
+                            <option value="8.0">China</option>
+                            <option value="7.0">Christmas Island</option>
+                            <option value="6.5">Cocos (Keeling) Islands</option>
+                            <option value="-5.0">Colombia</option>
+                            <option value="1.0">Congo</option>
+                            <option value="2.0"> Cyprus</option>
+                            <option value="1.0">Denmark</option>
+                            <option value="-5">Ecuador</option>
+                            <option value="-6.0">El Salvador</option>
+                            <option value="3.0">Eritrea</option>
+                            <option value="0.0">Faroe Islands</option>
+                            <option value="2.0">Finland</option>
+                            <option value="-3.0">French Guiana</option>
+                            <option value="-10.0">Southern Antarctic Lands</option>
+                            <option value="0.0"> Gambia</option>
+                            <option value="1.0">Germany</option>
+                            <option value="1.0">Gibraltar</option>
+                            <option value="2.0"> Greece</option>
+                            <option value="-4.0">Grenada</option>
+                            <option value="10.0"> Guam</option>
+                            <option value="0.0"> Guernsey</option>
+                            <option value="0.0">Guinea-Bissau</option>
+                            <option value="-5.0"> Haiti</option>
+                            <option value="1.0"> Vatican City</option>
+                            <option value="8.0"> Hong Kong</option>
+                            <option value="1.0"> Hungary</option>
+                            <option value="5.5"> India</option>
+                            <option value="3.3"> Iran</option>
+                            <option value="0.0"> Ireland</option>
+                            <option value="1.0"> Italy</option>
+                            <option value="2.0"> Israel</option>
+                            <option value="-5.0"> Jamaica</option>
+                            <option value="9.0"> Japan</option>
+                            <option value="3.0">Kenya</option>
+                            <option value="9.0">Korea North</option>
+                            <option value="3.0"> Kuwait</option>
+                            <option value="7.0">Laos</option>
+                            <option value="2.0"> Lesotho</option>
+                            <option value="2.0">Libya</option>
+                            <option value="1.0"> Luxembourg</option>
+                            <option value="5.0">Maldives</option>
+                            <option value="1.0"> Malta</option>
+                            <option value="-4.0">Martinique</option>
+                            <option value="0"> Mauritius</option>
+                            <option value="-6.0"> Mexico</option>
+                            <option value="7.0"> Mongolia</option>
+                            <option value="1.0"> Morocco</option>
+                            <option value="12.0"> Nauru</option>
+                            <option value="1.0"> Netherlands</option>
+                            <option value="11.0"> New Caledonia</option>
+                            <option value="-6.0"> Nicaragua</option>
+                            <option value="1.0">Nigeria</option>
+                            <option value="11.0"> Norfolk Island</option>
+                            <option value="1.0"> Norway</option>
+                            <option value="-11.0"> New Zealand</option>
+                            <option value="5.0"> Pakistan</option>
+                            <option value="-5.0">Panama</option>
+                            <option value="-4.0"> Paraguay</option>
+                            <option value="8.0"> Philippines
+                            <option value="1.0"> Poland</option>
+                            <option value="-4.0"> Puerto Rico</option>
+                            <option value="4.0"> Reunion(France)</option>
+                            <option value="3.0"> Russia-Anapa.Armavir </option>
+                            <option value="3.0"> Kaluga,Korolyov</option>
+                            <option value="0.0">Saint Helena</option>
+                            <option value="-4.0">Saint Lucia</option>
+                            <option value="-4.0">Saint Vincent</option>
+                            <option value="1.0">San Marino</option>
+                            <option value="3.0">Saudi Arabia</option>
+                            <option value="0.0">Senegal</option>
+                            <option value="0.0">Sierra Leone</option>
+                            <option value="1.0">Slovakia</option>
+                            <option value="11.0">Solomon Islands</option>
+                            <option value="2.0"> South Africa</option>
+                            <option value="1.0">Spain</option>
+                            <option value="5.5">Sri Lanka</option>
+                            <option value="-3.5"> Suriname</option>
+                            <option value="1.0"> Switzerland</option>
+                            <option value="5.0"> Tajikistan</option>
+                            <option value="7.0"> Thailand</option>
+                            <option value="0.0"> Toga</option>
+                            <option value="-4.0"> Trinidad</option>
+                            <option value="3.0"> Turkey</option>
+                            <option value="12.0"> Tuvalu</option>
+                            <option value="2.0"> Ukraine</option>
+                            <option value="0.0">United Kingdom</option>
+                            <option value="-5.0"> USA </option>
+                            <option value="5.0"> Uzbekistan</option>
+                            <option value="11.0"> Vanuatu</option>
+                            <option value="7.0"> Vietnam</option>
+                            <option value="3.0"> Yemen</option>
+                            <option value="2.0"> Zambia</option>
+                            <option value="2.0"> Zimbabwe</option>
+
+                        </select>
+                        
+                    </td>
+                </tr>
+
+               
+            </form>
+        </table>
+     <button  style="margin-left:10vw ;margin-top: 5vh;height: 3rem;margin-bottom: 2vh;font-weight: bolder;"><a href="/news.html" style="text-decoration: none;" >Click to view Latest News of this Country</a</button>
+    </div>
+   
+   
+    <script src="js/index.js"></script>
+    <script src="/js/news.js"></script>
+  </body>
+</html>
